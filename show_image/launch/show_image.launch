@@ -1,0 +1,8 @@
+<launch>
+    <!--运行bag-->
+    <node pkg="rosbag" type="play" name="rosbag" args="$(find odom_imu_listener)/bagfiles/all.bag"/>
+
+    <!--显示image-->
+    <node pkg="show_image" type="show_image" name="show_image" output="screen"/>
+
+</launch>

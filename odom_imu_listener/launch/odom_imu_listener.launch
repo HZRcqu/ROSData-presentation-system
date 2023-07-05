@@ -1,0 +1,8 @@
+<launch>
+    <!--运行bag-->
+    <node pkg="rosbag" type="play" name="rosbag" args="$(find odom_imu_listener)/bagfiles/all.bag"/>
+
+    <!--读取imu和odom-->
+    <node pkg="odom_imu_listener" type="odom_imu_listener" name="odom_imu_listener" output="screen"/>
+
+</launch>

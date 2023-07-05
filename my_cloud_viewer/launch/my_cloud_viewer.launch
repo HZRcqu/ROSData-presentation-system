@@ -1,0 +1,8 @@
+<launch>
+    <!--运行bag-->
+    <node pkg="rosbag" type="play" name="rosbag" args="$(find odom_imu_listener)/bagfiles/all.bag"/>
+
+    <!--读取imu和odom-->
+    <node pkg="my_cloud_viewer" type="my_cloud_viewer" name="my_cloud_viewer" output="screen"/>
+
+</launch>
